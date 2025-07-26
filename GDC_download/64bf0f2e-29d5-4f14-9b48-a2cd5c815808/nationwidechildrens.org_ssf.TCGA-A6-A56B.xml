@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssf:tcga_bcr xsi:schemaLocation="http://tcga.nci/bcr/xml/ssf/2.7 https://raw.githubusercontent.com/nchbcr/xsd/2.7/tcga.nci/bcr/xml/ssf/2.7/TCGA_BCR.SSF.xsd" schemaVersion="2.7" xmlns:ssf="http://tcga.nci/bcr/xml/ssf/2.7" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:admin="http://tcga.nci/bcr/xml/administration/2.7" xmlns:shared="http://tcga.nci/bcr/xml/shared/2.7" xmlns:ssf_disease="http://tcga.nci/bcr/xml/ssf_disease/2.7">
+    <admin:admin>
+        <admin:bcr xsd_ver="1.17">Nationwide Children's Hospital</admin:bcr>
+        <admin:file_uuid xsd_ver="2.6">533BC214-FD23-4B8F-A477-2944AFB2D934</admin:file_uuid>
+        <admin:batch_number xsd_ver="1.17">300.56.0</admin:batch_number>
+        <admin:project_code xsd_ver="2.7">TCGA</admin:project_code>
+        <admin:disease_code xsd_ver="2.6">COAD</admin:disease_code>
+        <admin:day_of_dcc_upload xsd_ver="1.17">22</admin:day_of_dcc_upload>
+        <admin:month_of_dcc_upload xsd_ver="1.17">12</admin:month_of_dcc_upload>
+        <admin:year_of_dcc_upload xsd_ver="1.17">2016</admin:year_of_dcc_upload>
+        <admin:patient_withdrawal>
+            <admin:withdrawn>false</admin:withdrawn>
+        </admin:patient_withdrawal>
+        <admin:program xsi:nil="true" xsd_ver="2.7"/>
+        <admin:dbgap_registration_code xsi:nil="true" xsd_ver="2.7"/>
+    </admin:admin>
+    <ssf:patient>
+        <admin:additional_studies/>
+        <shared:bcr_patient_barcode preferred_name="" display_order="9999" cde="2003301" cde_ver="" xsd_ver="1.8" owner="TSS" procurement_status="Completed" restricted="false">TCGA-A6-A56B</shared:bcr_patient_barcode>
+        <shared:bcr_patient_uuid preferred_name="" display_order="9999" cde="" cde_ver="" xsd_ver="2.3" owner="TSS" procurement_status="Completed" restricted="false">74A0264D-1D31-430D-9A88-E7334C8AA96C</shared:bcr_patient_uuid>
+        <shared:tissue_source_site cde="" cde_ver="" xsd_ver="2.4" owner="TSS" procurement_status="Completed" restricted="false">A6</shared:tissue_source_site>
+        <shared:patient_id cde="" cde_ver="" xsd_ver="2.4" owner="TSS" procurement_status="Completed" restricted="false">A56B</shared:patient_id>
+        <shared:hiv_status preferred_name="hiv_status" display_order="9999" cde="2180464" cde_ver="1.000" xsd_ver="2.5" tier="" owner="TSS" procurement_status="Not Applicable" restricted="false" xsi:nil="true"/>
+        <ssf:tumor_samples>
+            <ssf:tumor_sample>
+                <ssf:bcr_sample_uuid preferred_name="" display_order="9999" cde="" cde_ver="" xsd_ver="2.3" tier="2" owner="TSS" procurement_status="Completed" restricted="false">4425892C-8C35-4F6C-B531-1EC510AD19D2</ssf:bcr_sample_uuid>
+                <shared:days_to_sample_procurement precision="day" xsd_ver="2.3" tier="" cde="" owner="TSS" procurement_status="Completed" preferred_name="" display_order="9999" cde_ver="">22</shared:days_to_sample_procurement>
+                <shared:method_of_sample_procurement preferred_name="tumor_sample_procurement_method" display_order="11" cde="3103514" cde_ver="1.000" xsd_ver="2.3" tier="1" owner="TSS" procurement_status="Completed" restricted="false" source_system_identifier="2198889">Sigmoid Colectomy</shared:method_of_sample_procurement>
+                <shared:other_method_of_sample_procurement preferred_name="cancer_procurement_method_other" display_order="12" cde="2006730" cde_ver="1.000" xsd_ver="2.5" tier="1" owner="TSS" procurement_status="Not Applicable" restricted="false" source_system_identifier="2198890" xsi:nil="true"/>
+                <ssf:vessel_used preferred_name="tumor_sample_vessel_used" display_order="16" cde="3081940" cde_ver="1.000" xsd_ver="2.5" tier="1" owner="TSS" procurement_status="Completed" restricted="false" source_system_identifier="2198894">Cryovial</ssf:vessel_used>
+                <ssf:other_vessel_used preferred_name="tumor_sample_ship_vessel_other" display_order="17" cde="3288137" cde_ver="1.000" xsd_ver="2.5" tier="1" owner="TSS" procurement_status="Not Applicable" restricted="false" source_system_identifier="2198895"/>
+                <shared:maximum_tumor_dimension preferred_name="tumor_resected_max_dimension" display_order="9999" cde="64215" cde_ver="3.000" xsd_ver="2.6" tier="2" owner="TSS" procurement_status="Not Applicable" restricted="false" xsi:nil="true"/>
+                <ssf:tumor_weight preferred_name="tumor_sample_weight" display_order="23" cde="3081946" cde_ver="1.000" xsd_ver="2.5" owner="TSS" procurement_status="Completed" restricted="false" source_system_identifier="2198901">200</ssf:tumor_weight>
+                <ssf:sample_prescreened preferred_name="tumor_sample_prescreened_at_tss" display_order="19" cde="3081942" cde_ver="1.000" xsd_ver="2.5" tier="1" owner="TSS" procurement_status="Completed" restricted="false" source_system_identifier="2198897">YES</ssf:sample_prescreened>
+                <shared:tumor_nuclei_percent preferred_name="tumor_nuclei_percent" display_order="24" cde="2841225" cde_ver="1.000" xsd_ver="2.5" owner="TSS" procurement_status="Completed" restricted="false" source_system_identifier="2198902">95</shared:tumor_nuclei_percent>
+                <shared:tumor_necrosis_percent preferred_name="necrosis_percent" display_order="25" cde="2841237" cde_ver="1.000" xsd_ver="2.5" owner="TSS" procurement_status="Completed" restricted="false" source_system_identifier="2198903">5</shared:tumor_necrosis_percent>
+                <ssf:days_to_pathology_review precision="day" xsd_ver="2.5" tier="2" cde="3288497" owner="TSS" procurement_status="Completed" preferred_name="tss_pathology_review_days_to" display_order="63" cde_ver="1.000">39</ssf:days_to_pathology_review>
+                <ssf:path_confirm_tumor_nuclei_metrics preferred_name="tumor_nuclei_requirements_indicator" display_order="64" cde="3288520" cde_ver="1.000" xsd_ver="2.5" owner="TSS" procurement_status="Completed" restricted="false" source_system_identifier="2198942">YES</ssf:path_confirm_tumor_nuclei_metrics>
+                <ssf:path_confirm_tumor_necrosis_metrics preferred_name="necrosis_requirements_indicator" display_order="65" cde="3288524" cde_ver="1.000" xsd_ver="2.5" owner="TSS" procurement_status="Completed" restricted="false" source_system_identifier="2198943">YES</ssf:path_confirm_tumor_necrosis_metrics>
+                <ssf:path_confirm_report_attached preferred_name="tss_pathology_submitted" display_order="66" cde="3288292" cde_ver="1.000" xsd_ver="2.5" owner="TSS" procurement_status="Completed" restricted="false" source_system_identifier="2198944">YES</ssf:path_confirm_report_attached>
+                <ssf:path_confirm_diagnosis_matching preferred_name="histologic_dx_consistent" display_order="68" cde="3288300" cde_ver="1.000" xsd_ver="1.8" owner="TSS" procurement_status="Completed" restricted="false" source_system_identifier="2198946">YES</ssf:path_confirm_diagnosis_matching>
+                <ssf:reason_path_confirm_diagnosis_not_matching preferred_name="histologic_dx_inconsistent_reason" display_order="69" cde="3288315" cde_ver="1.000" xsd_ver="2.5" tier="1" owner="TSS" procurement_status="Not Available" restricted="false" source_system_identifier="2198947"/>
+                <ssf:top_slide_submitted preferred_name="tumor_sample_top_slide_submitted" display_order="20" cde="3081944" cde_ver="1.000" xsd_ver="1.8" tier="1" owner="TSS" procurement_status="Completed" restricted="false" source_system_identifier="2198898">YES</ssf:top_slide_submitted>
+                <ssf:digital_image_submitted preferred_name="tumor_sample_image_submitted" display_order="21" cde="3081948" cde_ver="1.000" xsd_ver="1.8" tier="1" owner="TSS" procurement_status="Completed" restricted="false" source_system_identifier="2198899">NO</ssf:digital_image_submitted>
+                <ssf:ffpe_tumor_slide_submitted preferred_name="ffpe_slide_submitted_indicator" display_order="66" cde="3295811" cde_ver="1.000" xsd_ver="2.5" tier="2" owner="TSS" procurement_status="Completed" restricted="false">NO</ssf:ffpe_tumor_slide_submitted>
+                <ssf:submitted_for_lce preferred_name="tumor_sample_bcr_macrodissection" display_order="9999" cde="3288488" cde_ver="1.000" xsd_ver="1.8" tier="2" owner="TSS" procurement_status="Completed" restricted="false" source_system_identifier="2198896">NO</ssf:submitted_for_lce>
+                <shared:other_dx preferred_name="history_other_malignancy" display_order="16" cde="3382736" cde_ver="2.000" xsd_ver="2.5" tier="1" owner="TSS" procurement_status="Completed" restricted="false" source_system_identifier="2198949">No</shared:other_dx>
+                <shared:history_of_neoadjuvant_treatment preferred_name="history_neoadjuvant_treatment" display_order="17" cde="3382737" cde_ver="1.000" xsd_ver="2.4" tier="1" owner="TSS" procurement_status="Completed" restricted="false" source_system_identifier="2198948">No</shared:history_of_neoadjuvant_treatment>
+                <shared:consent_or_death_status preferred_name="patient_consent_status" display_order="72" cde="3288361" cde_ver="1.000" xsd_ver="2.5" tier="1" owner="TSS" procurement_status="Completed" restricted="false" source_system_identifier="2198950">Consented</shared:consent_or_death_status>
+                <shared:days_to_consent precision="day" xsd_ver="2.5" tier="1" cde="3288498" owner="TSS" procurement_status="Completed" preferred_name="patient_consent_days_to" display_order="76" cde_ver="1.000">33</shared:days_to_consent>
+                <shared:country preferred_name="tumor_sample_procurement_country" display_order="13" cde="3203072" cde_ver="1.000" xsd_ver="2.5" tier="1" owner="TSS" procurement_status="Completed" restricted="false" source_system_identifier="2198891">United States</shared:country>
+                <ssf_disease:disease_details/>
+                <ssf:tumor_histologies>
+                    <ssf:tumor_histology>
+                        <shared:histological_type preferred_name="histologic_diagnosis" display_order="5" cde="3081934" cde_ver="3.000" xsd_ver="2.5" tier="1" owner="TSS" procurement_status="Completed" restricted="false" source_system_identifier="2198882">Colon Adenocarcinoma</shared:histological_type>
+                        <shared:histological_type_other preferred_name="histologic_diagnosis_other" display_order="9" cde="3124492" cde_ver="1.000" xsd_ver="2.5" tier="2" owner="TSS" procurement_status="Not Applicable" restricted="false" xsi:nil="true"/>
+                        <shared:histological_percentage preferred_name="histologic_diagnosis_percent" display_order="9999" cde="3729998" cde_ver="1.000" xsd_ver="2.6" tier="2" owner="TSS" procurement_status="Not Applicable" restricted="false"/>
+                        <shared:tumor_morphology_percentage preferred_name="" display_order="9999" cde="3729984" cde_ver="1.000" xsd_ver="2.6" tier="2" owner="TSS" procurement_status="Not Applicable" restricted="false" xsi:nil="true"/>
+                    </ssf:tumor_histology>
+                </ssf:tumor_histologies>
+                <ssf:tumor_locations>
+                    <ssf:tumor_focality preferred_name="tumor_focality" display_order="9999" cde="3174022" cde_ver="1.000" xsd_ver="2.5" tier="2" owner="TSS" procurement_status="Not Applicable" restricted="false"/>
+                    <ssf:laterality preferred_name="" display_order="9999" cde="4742852" cde_ver="" xsd_ver="2.6" tier="" owner="TSS" procurement_status="Not Applicable" restricted="false" source_system_identifier="2198884"/>
+                    <ssf:tumor_location>
+                        <ssf:site_of_disease preferred_name="" display_order="9999" cde="4742851" cde_ver="" xsd_ver="2.6" tier="2" owner="TSS" procurement_status="Completed" restricted="false" source_system_identifier="2198884">Colon</ssf:site_of_disease>
+                        <ssf:site_of_disease_text preferred_name="" display_order="9999" cde="4742871" cde_ver="" xsd_ver="2.6" tier="2" owner="TSS" procurement_status="Not Available" restricted="false"/>
+                        <ssf:site_of_disease_description preferred_name="" display_order="9999" cde="4742918" cde_ver="" xsd_ver="2.6" tier="2" owner="TSS" procurement_status="Completed" restricted="false" source_system_identifier="2198884">Sigmoid Colon</ssf:site_of_disease_description>
+                    </ssf:tumor_location>
+                </ssf:tumor_locations>
+            </ssf:tumor_sample>
+        </ssf:tumor_samples>
+        <ssf:normal_controls>
+            <ssf:normal_control>
+                <ssf:bcr_sample_uuid preferred_name="" display_order="9999" cde="" cde_ver="" xsd_ver="2.3" tier="2" owner="TSS" procurement_status="Completed" restricted="false">CE20A5FF-88F9-43B4-8C8A-62FB9CFFF9E6</ssf:bcr_sample_uuid>
+                <ssf:method_of_normal_sample_procurement preferred_name="normal_control_method" display_order="50" cde="3288147" cde_ver="1.000" xsd_ver="2.5" tier="1" owner="TSS" procurement_status="Completed" restricted="false" source_system_identifier="2198912">Blood Draw</ssf:method_of_normal_sample_procurement>
+                <ssf:other_method_of_normal_sample_procurement preferred_name="normal_control_method_other" display_order="51" cde="3288151" cde_ver="1.000" xsd_ver="2.5" tier="1" owner="TSS" procurement_status="Not Applicable" restricted="false"/>
+                <ssf:days_to_normal_sample_procurement precision="day" xsd_ver="2.3" tier="1" cde="3288496" owner="TSS" procurement_status="Completed" preferred_name="normal_control_procurement_days_to" display_order="55" cde_ver="1.000">22</ssf:days_to_normal_sample_procurement>
+                <ssf:normal_sample_site_proximity_to_tumor preferred_name="normal_control_proximity_to_tumor" display_order="59" cde="3088708" cde_ver="1.000" xsd_ver="2.5" tier="1" owner="TSS" procurement_status="Not Available" restricted="false"/>
+                <ssf:ncedna_dna_conc preferred_name="normal_control_DNA_concentration" display_order="48" cde="3288187" cde_ver="1.000" xsd_ver="2.5" owner="TSS" procurement_status="Not Available" restricted="false"/>
+                <ssf:ncedna_dna_qm preferred_name="normal_control_DNA_quant_method" display_order="47" cde="3288186" cde_ver="1.000" xsd_ver="2.5" tier="1" owner="TSS" procurement_status="Not Available" restricted="false"/>
+                <ssf:ncedna_dna_qty preferred_name="normal_control_DNA_quantity" display_order="46" cde="3288185" cde_ver="1.000" xsd_ver="2.5" owner="TSS" procurement_status="Not Available" restricted="false"/>
+                <ssf:ncedna_dna_vol preferred_name="normal_control_DNA_volume" display_order="49" cde="3288188" cde_ver="1.000" xsd_ver="2.5" owner="TSS" procurement_status="Not Available" restricted="false"/>
+                <ssf:normal_control_locations/>
+            </ssf:normal_control>
+        </ssf:normal_controls>
+    </ssf:patient>
+</ssf:tcga_bcr>

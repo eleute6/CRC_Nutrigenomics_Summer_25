@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<auxiliary:tcga_bcr xsi:schemaLocation="http://tcga.nci/bcr/xml/auxdata/2.7 https://raw.githubusercontent.com/nchbcr/xsd/2.7/tcga.nci/bcr/xml/auxdata/2.7/TCGA_BCR.Auxiliary_Data.xsd" schemaVersion="2.7" xmlns:auxiliary="http://tcga.nci/bcr/xml/auxdata/2.7" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:admin="http://tcga.nci/bcr/xml/administration/2.7" xmlns:shared="http://tcga.nci/bcr/xml/shared/2.7">
+    <admin:admin>
+        <admin:bcr xsd_ver="1.17">Nationwide Children's Hospital</admin:bcr>
+        <admin:file_uuid xsd_ver="2.6">03CCBEBB-BED6-4BEE-96DD-7077E05B8BB4</admin:file_uuid>
+        <admin:batch_number xsd_ver="1.17">76.78.0</admin:batch_number>
+        <admin:disease_code xsd_ver="2.6">COAD</admin:disease_code>
+        <admin:day_of_dcc_upload xsd_ver="1.17">1</admin:day_of_dcc_upload>
+        <admin:month_of_dcc_upload xsd_ver="1.17">7</admin:month_of_dcc_upload>
+        <admin:year_of_dcc_upload xsd_ver="1.17">2016</admin:year_of_dcc_upload>
+    </admin:admin>
+    <auxiliary:patient>
+        <shared:bcr_patient_barcode cde="2673794" xsd_ver="1.8" procurement_status="Completed" owner="">TCGA-CK-4951</shared:bcr_patient_barcode>
+        <shared:tissue_source_site cde="" xsd_ver="2.4" procurement_status="Completed" owner="">CK</shared:tissue_source_site>
+        <shared:patient_id cde="" xsd_ver="2.4" procurement_status="Completed" owner="">4951</shared:patient_id>
+        <shared:bcr_patient_uuid cde="" xsd_ver="2.3" procurement_status="Completed" owner="">2db3c23d-c591-4ea0-b0a8-ed9c4343c80e</shared:bcr_patient_uuid>
+        <auxiliary:microsatellite_instability_test_results>
+            <auxiliary:microsatellite_instability_test_result>
+                <auxiliary:bcr_aliquot_uuid cde="" xsd_ver="2.3" procurement_status="Completed" owner="">59f7b5b7-4dee-4356-9da7-be4be826753c</auxiliary:bcr_aliquot_uuid>
+                <auxiliary:mononucleotide_and_dinucleotide_marker_panel_analysis_status cde="3226963" xsd_ver="2.4" procurement_status="Completed" owner="">MSI-H</auxiliary:mononucleotide_and_dinucleotide_marker_panel_analysis_status>
+                <auxiliary:mononucleotide_marker_panel_analysis_status cde="3226962" xsd_ver="2.4" procurement_status="Not Available" owner=""/>
+            </auxiliary:microsatellite_instability_test_result>
+        </auxiliary:microsatellite_instability_test_results>
+    </auxiliary:patient>
+</auxiliary:tcga_bcr>
