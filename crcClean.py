@@ -73,11 +73,38 @@ def collect_data() -> pd.DataFrame:
 
     combined = []
     if mirna_frames:
-        combined.append(pd.concat([df.reset_index(drop=True) for df in mirna_frames], sort=False))
+        # Check for duplicate columns
+        all_columns = []
+        for df in mirna_frames:
+            all_columns.extend(df.columns.tolist())
+        duplicates = set([x for x in all_columns if all_columns.count(x) > 1])
+        if duplicates:
+            print("Duplicate miRNA_IDs in columns:", duplicates)
+        mirna_concat = pd.concat(mirna_frames, axis=0, sort=False)
+        mirna_concat = mirna_concat[~mirna_concat.index.duplicated(keep='first')]
+        combined.append(mirna_concat)
     if rppa_frames:
-        combined.append(pd.concat([df.reset_index(drop=True) for df in rppa_frames], sort=False))
+        # Check for duplicate columns
+        all_columns = []
+        for df in rppa_frames:
+            all_columns.extend(df.columns.tolist())
+        duplicates = set([x for x in all_columns if all_columns.count(x) > 1])
+        if duplicates:
+            print("Duplicate rppa_IDs in columns:", duplicates)
+        rppa_concat = pd.concat(rppa_frames, axis=0, sort=False)
+        rppa_concat = rppa_concat[~rppa_concat.index.duplicated(keep='first')]
+        combined.append(rppa_concat)
     if seg_frames:
-        combined.append(pd.concat([df.reset_index(drop=True) for df in seg_frames], sort=False))
+        # Check for duplicate columns
+        all_columns = []
+        for df in seg_frames:
+            all_columns.extend(df.columns.tolist())
+        duplicates = set([x for x in all_columns if all_columns.count(x) > 1])
+        if duplicates:
+            print("Duplicate seg_IDs in columns:", duplicates)
+        seg_concat = pd.concat(seg_frames, axis=0, sort=False)
+        seg_concat = seg_concat[~seg_concat.index.duplicated(keep='first')]
+        combined.append(seg_concat)
 
     if not combined:
         return pd.DataFrame()
