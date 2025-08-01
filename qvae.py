@@ -194,7 +194,12 @@ def main(args: argparse.Namespace):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="QVAE demo")
-    parser.add_argument("--csv", type=Path, default=Path("crc_consolidated.csv"), help="Input data CSV")
+    parser.add_argument(
+        "--csv",
+        type=Path,
+        default=Path(__file__).resolve().parent / "crc_consolidated.csv",
+        help="Input data CSV",
+    )
     parser.add_argument("--epochs", type=int, default=5)
     parser.add_argument("--lr", type=float, default=1e-3)
     parser.add_argument("--qubits", type=int, default=4, help="Number of qubits/latent dimensions")

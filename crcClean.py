@@ -1,8 +1,9 @@
+import argparse
 import pandas as pd
 from pathlib import Path
 import re
 
-DATA_DIR = Path('GDC_download')
+DATA_DIR = Path(__file__).resolve().parent / 'GDC_download'
 
 
 def extract_sample_id(path: Path) -> str:
@@ -49,13 +50,17 @@ def parse_seg(path: Path) -> pd.DataFrame | None:
     return result
 
 
-def collect_data() -> pd.DataFrame:
+def collect_data(data_dir: Path = DATA_DIR) -> pd.DataFrame:
     """Iterate through the download directory and consolidate data."""
+    if not data_dir.exists():
+        print(f"Data directory not found: {data_dir}")
+        return pd.DataFrame()
+
     mirna_frames = []
     rppa_frames = []
     seg_frames = []
 
-    for f in DATA_DIR.rglob('*'):
+    for f in data_dir.rglob('*'):
         if f.suffix not in {'.txt', '.tsv'}:
             continue
         name = f.name.lower()
@@ -114,10 +119,23 @@ def collect_data() -> pd.DataFrame:
 
 
 def main():
-    data = collect_data()
+    parser = argparse.ArgumentParser(description="Consolidate CRC data")
+    parser.add_argument(
+        "--data-dir", type=Path, default=DATA_DIR,
+        help="Directory containing downloaded data",
+    )
+    parser.add_argument(
+        "--output", type=Path,
+        default=Path(__file__).resolve().parent / 'crc_consolidated.csv',
+        help="Path for the consolidated CSV output",
+    )
+    args = parser.parse_args()
+
+    data = collect_data(args.data_dir)
     if not data.empty:
-        data.to_csv('crc_consolidated.csv')
-        print('Consolidated data written to crc_consolidated.csv')
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        data.to_csv(args.output)
+        print(f"Consolidated data written to {args.output}")
     else:
         print('No data parsed. Nothing was written.')
 
