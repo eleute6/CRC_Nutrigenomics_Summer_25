@@ -54,6 +54,13 @@ def simulate_butyrate(data: torch.Tensor, shift: float = 0.5) -> torch.Tensor:
 class QuantumLayer(nn.Module):
     """Variational quantum circuit embedded inside a PyTorch Module."""
 
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        outputs = []
+        for sample in x:
+            result = self.circuit(sample, self.weights)
+            outputs.append(torch.as_tensor(result, dtype=torch.float32))  # Ensure float32
+        return torch.stack(outputs)
+
     def __init__(self, n_qubits: int = 4, n_layers: int = 2):
         super().__init__()
         self.n_qubits = n_qubits
@@ -78,12 +85,12 @@ class QuantumLayer(nn.Module):
 
         self.circuit = circuit
 
-    def forward(self, x: torch.Tensor) -> torch.Tensor:
-        # Expect x with shape (batch, n_qubits)
-        outputs = []
-        for sample in x:
-            outputs.append(self.circuit(sample, self.weights))
-        return torch.stack(outputs)
+        #def forward(self, x: torch.Tensor) -> torch.Tensor:
+            # Expect x with shape (batch, n_qubits)
+            #outputs = []
+            #for sample in x:
+                #outputs.append(self.circuit(sample, self.weights))
+            #return torch.stack(outputs)
 
 
 # ---------------------------- QVAE Model ---------------------------- #
