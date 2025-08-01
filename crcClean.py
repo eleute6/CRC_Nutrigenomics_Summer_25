@@ -73,11 +73,11 @@ def collect_data() -> pd.DataFrame:
 
     combined = []
     if mirna_frames:
-        combined.append(pd.concat(mirna_frames, sort=False))
+        combined.append(pd.concat([df.reset_index(drop=True) for df in mirna_frames], sort=False))
     if rppa_frames:
-        combined.append(pd.concat(rppa_frames, sort=False))
+        combined.append(pd.concat([df.reset_index(drop=True) for df in rppa_frames], sort=False))
     if seg_frames:
-        combined.append(pd.concat(seg_frames, sort=False))
+        combined.append(pd.concat([df.reset_index(drop=True) for df in seg_frames], sort=False))
 
     if not combined:
         return pd.DataFrame()
