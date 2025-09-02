@@ -29,8 +29,12 @@ import pennylane as qml
 
 def load_crc_csv(csv_path: Path) -> torch.Tensor:
     """Load multi-omic data saved by crcClean.py and return as tensor."""
-    df = pd.read_csv(csv_path, index_col=0)
+    df = pd.read_csv(csv_path)
+    if "sample_id" in df.columns:
+        df = df.drop(columns=["sample_id"])
+    df = df.select_dtypes(include=[np.number])
     data = df.to_numpy(dtype=np.float32)
+    print(f"Dataset shape: {data.shape}")
     return torch.from_numpy(data)
 
 
@@ -173,6 +177,7 @@ def main(args: argparse.Namespace):
     else:
         print("CSV not found, using synthetic data for demo.")
         data = create_synthetic_data(samples=40, features=args.features)
+        print(f"Dataset shape: {tuple(data.shape)}")
 
     dataset = TensorDataset(data)
     loader = DataLoader(dataset, batch_size=8, shuffle=True)

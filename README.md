@@ -5,6 +5,9 @@ This repository contains scripts for handling multi-omic data from colon cancer 
 - `crcClean.py` consolidates miRNA, RPPA, and copy number data into a single CSV file.
 - `qvae.py` provides a Quantum Variational Autoencoder implementation using PyTorch and PennyLane.
 
+Input files reside in the `GDC_download/` directory and all sample identifiers are
+normalized to the `TCGA-XX-YYYY` format.
+
 To run the QVAE demo with synthetic data:
 
 ```bash
